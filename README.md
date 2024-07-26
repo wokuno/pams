@@ -1,4 +1,4 @@
-# Paco Autonomous Management System
+# paco Autonomous Management System
 ### Current Features:
 - Fan Control
 
