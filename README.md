@@ -4,8 +4,18 @@
 ## Current Features
 
 - Fan Control
+- Fan Speed Daemon
 
 ## Installation
+
+### Requirements
+
+- Arduino-cli
+- Go 1.22
+- Systemd
+- Currently supporting openSUSE
+
+### Arduino Installation
 
 ``` bash
 # Make sure your user can use Serial Ports
@@ -26,4 +36,17 @@ arduino-cli core install arduino:avr
 
 arduino-cli compile -b arduino:avr:uno src/arduino/pams.ino
 arduino-cli upload -v -b arduino:avr:uno -p /dev/ttyACM0
+```
+
+### pAMS Installation
+
+```bash
+./src/scripts/build_pams.sh
+sudo ./src/scripts/install_pams.sh
+```
+
+### Uninstall
+
+```bash
+sudo ./src/scripts/uninstall_pams.sh
 ```
