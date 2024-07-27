@@ -19,7 +19,7 @@ void loop() {
   } else {
     newPercentage = 0;
   }
- 
+
   if (newPercentage != mapedPercentage) {
     Serial.println(percentage);
     pwmDuty(newPercentage); // 75% (range = 0-79 = 1.25-100%)
