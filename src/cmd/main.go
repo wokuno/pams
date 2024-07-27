@@ -21,11 +21,21 @@ func main() {
 	highestTemp := getHighestTemp()
 	fmt.Println("Highest temperature is:", highestTemp)
 
-	fanSpeed := "25\n"
+	fanSpeed := "10\n"
+
+	if highestTemp > 40 {
+		fanSpeed = "20\n"
+	}
 
 	if highestTemp > 50 {
+		fanSpeed = "50\n"
+	}
+
+	if highestTemp > 70 {
 		fanSpeed = "75\n"
-	} else if highestTemp > 70 {
+	}
+
+	if highestTemp > 80 {
 		fanSpeed = "100\n"
 	}
 

@@ -67,11 +67,12 @@ echo '[Unit]
 Description="Run pams every 10 seconds"
 
 [Timer]
-OnUnitActiveSec=10
+OnBootSec=1min
+OnUnitActiveSec=10s
 Unit=pams.service
 
 [Install]
-WantedBy=multi-user.target' > /etc/systemd/system/pams.timer
+WantedBy=timers.target' > /etc/systemd/system/pams.timer
 
 echo "cat /etc/systemd/system/pams.timer"
 cat /etc/systemd/system/pams.timer
